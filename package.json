@@ -1,0 +1,71 @@
+{
+  "name": "vscode-window-history",
+  "displayName": "VSCode Window History",
+  "description": "Switch between open Visual Studio Code windows via shortcut.",
+  "version": "0.1.0",
+  "publisher": "softwaretheke",
+  "author": {
+    "name": "SoftwareTheke",
+    "email": "info@software-theke.de",
+    "url": "https://www.software-theke.de"
+  },
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "window",
+    "history",
+    "switch",
+    "shortcut",
+    "previous"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/softwaretheke/vscode-window-history"
+  },
+  "bugs": {
+    "url": "https://github.com/softwaretheke/vscode-window-history/issues",
+    "email": "technik@software-theke.de"
+  },
+  "homepage": "https://github.com/softwaretheke/vscode-window-history/README.md",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "icon": "res/icon.png",
+  "galleryBanner": {
+    "color": "#121d30",
+    "theme": "dark"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-window-history.goToPreviousWindow",
+        "title": "Go to Previous Window"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
